@@ -1,6 +1,7 @@
 package com.bootcamp.businessclient.service.Impl.impl;
 
 import com.bootcamp.businessclient.model.BusinessClient;
+import com.bootcamp.businessclient.model.DailyAverageBalanceDto;
 import com.bootcamp.businessclient.repository.BusinessClientRepository;
 import com.bootcamp.businessclient.service.Impl.BusinessClientService;
 import lombok.RequiredArgsConstructor;
@@ -42,6 +43,12 @@ public class BusinessClientServiceImpl implements BusinessClientService {
     @Override
     public Flux<BusinessClient> getByRucNumber(String rucNumber) {
         return repository.findByRucNumber(rucNumber);
+    }
+
+    @Override
+    public Flux<DailyAverageBalanceDto> getDailyAverageBalance(Integer clientId) {
+      // TODO Auto-generated method stub
+      return null;
     }
 
 }
