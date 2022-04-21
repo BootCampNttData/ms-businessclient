@@ -1,10 +1,10 @@
 package com.bootcamp.businessclient.service.Impl.impl;
 
+import org.springframework.stereotype.Service;
 import com.bootcamp.businessclient.model.Client;
 import com.bootcamp.businessclient.repository.ClientRepository;
 import com.bootcamp.businessclient.service.Impl.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -25,12 +25,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Mono deleteById(String id) {
+    public Mono<Void> deleteById(String id) {
         return repository.deleteById(id);
     }
 
     @Override
-    public Mono delete(Client client) {
+    public Mono<Void> delete(Client client) {
         return repository.delete(client);
     }
 

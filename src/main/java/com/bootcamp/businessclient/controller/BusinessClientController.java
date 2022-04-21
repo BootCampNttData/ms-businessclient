@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.bootcamp.businessclient.dto.AccountAverageDTO;
 import com.bootcamp.businessclient.model.BusinessClient;
-import com.bootcamp.businessclient.model.DailyAverageBalanceDto;
 import com.bootcamp.businessclient.model.Client;
 import com.bootcamp.businessclient.service.Impl.BusinessClientService;
 import com.bootcamp.businessclient.service.Impl.ClientService;
@@ -53,17 +53,17 @@ public class BusinessClientController {
     }
 
     @DeleteMapping
-    public Mono<BusinessClient> delete(@RequestBody BusinessClient businessClient){
+    public Mono<Void> delete(@RequestBody BusinessClient businessClient){
         return service.delete(businessClient);
     }
 
     @DeleteMapping("/byId/{id}")
-    public Mono<BusinessClient> deleteById(@RequestBody String id){
+    public Mono<Void> deleteById(@RequestBody String id){
         return service.deleteById(id);
     }
     
-    @GetMapping("/{id}/summaryDailyAverageBalance")
-    public Flux<DailyAverageBalanceDto> getDailyAverageBalance(@PathVariable("id") Integer clientId) {
+    @GetMapping("/{clientId}/summaryDailyAverageBalance")
+    public Flux<AccountAverageDTO> getDailyAverageBalance(@PathVariable("clientId") String clientId) {
       return service.getDailyAverageBalance(clientId);
     }
 
@@ -85,12 +85,12 @@ public class BusinessClientController {
     }
 
     @DeleteMapping("/client")
-    public Mono<Client> delete(@RequestBody Client client){
+    public Mono<Void> delete(@RequestBody Client client){
         return clientService.delete(client);
     }
 
     @DeleteMapping("/client/byId/{id}")
-    public Mono<Client> deleteClientById(@RequestBody String id){
+    public Mono<Void> deleteClientById(@RequestBody String id){
         return clientService.deleteById(id);
     }
 

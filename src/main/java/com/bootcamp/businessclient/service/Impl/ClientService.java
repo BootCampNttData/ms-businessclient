@@ -12,6 +12,6 @@ public interface ClientService {
     Mono<Client> create(Client client);
     Flux<Client> getByDocumentId(String documentId);
     Mono<Client> update(Client client);
-    Mono<Client> deleteById(String id);
-    Mono delete(Client client);
+    Mono<Void> deleteById(String id);
+    Mono<Void> delete(Client client);
 }
