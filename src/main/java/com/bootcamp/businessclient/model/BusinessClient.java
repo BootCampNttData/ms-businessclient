@@ -13,6 +13,7 @@ public class BusinessClient {
     private String[] accountHolders;
     private String[] signers;
     private String companyName;
+    private Boolean isPyme;
     private String address;
     private String phone;
 }
