@@ -52,10 +52,10 @@ public class BusinessClientController {
         return service.create(businessClient);
     }
 
-    @DeleteMapping
-    public Mono<Void> delete(@RequestBody BusinessClient businessClient){
-        return service.delete(businessClient);
-    }
+//    @DeleteMapping
+//    public Mono<Void> delete(@RequestBody BusinessClient businessClient){
+//        return service.delete(businessClient);
+//    }
 
     @DeleteMapping("/byId/{id}")
     public Mono<Void> deleteById(@RequestBody String id){
@@ -84,10 +84,10 @@ public class BusinessClientController {
         return clientService.create(client);
     }
 
-    @DeleteMapping("/client")
-    public Mono<Void> delete(@RequestBody Client client){
-        return clientService.delete(client);
-    }
+//    @DeleteMapping("/client")
+//    public Mono<Void> delete(@RequestBody Client client){
+//        return clientService.delete(client);
+//    }
 
     @DeleteMapping("/client/byId/{id}")
     public Mono<Void> deleteClientById(@RequestBody String id){
