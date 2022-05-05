@@ -14,5 +14,5 @@ public interface BusinessClientService {
     Mono<Void> deleteById(String id);
     Mono<Void> delete(BusinessClient businessClient);
     Flux<AccountAverageDTO> getDailyAverageBalance(String clientId);
-
+    Mono<Boolean> isPyme(String id);
 }

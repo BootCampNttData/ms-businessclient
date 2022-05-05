@@ -67,6 +67,11 @@ public class BusinessClientController {
       return service.getDailyAverageBalance(clientId);
     }
 
+    @GetMapping("/isPyme/{clientId}")
+    public Mono<Boolean> isPyme(@PathVariable("clientId") String id){
+        return service.isPyme(id);
+    }
+
     /**  ****************************************************************************************************/
 
     @GetMapping("/client")
@@ -93,5 +98,7 @@ public class BusinessClientController {
     public Mono<Void> deleteClientById(@RequestBody String id){
         return clientService.deleteById(id);
     }
+
+
 
 }

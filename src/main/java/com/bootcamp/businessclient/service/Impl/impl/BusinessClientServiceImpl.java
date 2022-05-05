@@ -87,4 +87,16 @@ public class BusinessClientServiceImpl implements BusinessClientService {
         });
   }
 
+
+    public Mono<Boolean> isPyme(String id){
+        return repository.findByRucNumberAndIsPyme(id,true)
+                .map(cli -> {
+                    if(cli.getIsPyme()){
+                        return Boolean.TRUE;
+                    }else{
+                        return Boolean.FALSE;
+                    }
+                });
+    }
+
 }
