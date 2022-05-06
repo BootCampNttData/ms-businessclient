@@ -1,18 +1,19 @@
-package com.bootcamp.businessclient.service.Impl.impl;
+package com.bootcamp.businessclient.service.Impl;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.temporal.ChronoField;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
+
+import com.bootcamp.businessclient.service.AccountService;
+import com.bootcamp.businessclient.service.BusinessClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bootcamp.businessclient.dto.AccountAverageDTO;
 import com.bootcamp.businessclient.dto.AverageByDate;
 import com.bootcamp.businessclient.model.BusinessClient;
 import com.bootcamp.businessclient.repository.BusinessClientRepository;
-import com.bootcamp.businessclient.service.Impl.AccountService;
-import com.bootcamp.businessclient.service.Impl.BusinessClientService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

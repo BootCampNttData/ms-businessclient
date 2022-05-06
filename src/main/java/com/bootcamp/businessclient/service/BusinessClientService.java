@@ -1,4 +1,4 @@
-package com.bootcamp.businessclient.service.Impl;
+package com.bootcamp.businessclient.service;
 
 import com.bootcamp.businessclient.dto.AccountAverageDTO;
 import com.bootcamp.businessclient.model.BusinessClient;

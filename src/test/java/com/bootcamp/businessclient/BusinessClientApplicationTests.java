@@ -11,8 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import com.bootcamp.businessclient.dto.AccountDTO;
 import com.bootcamp.businessclient.dto.MovementDTO;
-import com.bootcamp.businessclient.service.Impl.AccountService;
-import com.bootcamp.businessclient.service.Impl.BusinessClientService;
+import com.bootcamp.businessclient.service.AccountService;
+import com.bootcamp.businessclient.service.BusinessClientService;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 

@@ -1,9 +1,9 @@
-package com.bootcamp.businessclient.service.Impl.impl;
+package com.bootcamp.businessclient.service.Impl;
 
+import com.bootcamp.businessclient.service.ClientService;
 import org.springframework.stereotype.Service;
 import com.bootcamp.businessclient.model.Client;
 import com.bootcamp.businessclient.repository.ClientRepository;
-import com.bootcamp.businessclient.service.Impl.ClientService;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
